@@ -7,7 +7,7 @@ import textwrap
 
 def cowsay(cowType, str, length=40):
     if cowType == "mad":
-        return build_bubble(str, length) + build_madcow()
+        return build_bubble(str, length) + build_oddcow()
 
     elif cowType == "cow":
         return build_bubble(str, length) + build_cow()
