@@ -5,8 +5,22 @@
 import sys
 import textwrap
 
-def cowsay(str, length=40):
-    return build_bubble(str, length) + build_cow()
+def cowsay(cowType, str, length=40):
+    if cowType == "mad":
+        return build_bubble(str, length) + build_madcow()
+
+    elif cowType == "cow":
+        return build_bubble(str, length) + build_cow()
+
+
+def build_oddcow():
+    return """
+         \   <__> 
+          \  (db)\_______
+             (__)\       )\/\\
+                 ||----W |
+                 ||     ||
+    """
 
 def build_cow():
     return """
@@ -55,8 +69,8 @@ def get_border(lines, index):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print "Usage: '%s string'" % sys.argv[0]
+    if len(sys.argv) < 3:
+        print("Usage: '%s cow type string'" % sys.argv[0])
         sys.exit(0)
 
-    print cowsay(sys.argv[1])
+    print(cowsay(sys.argv[1],sys.argv[2]))
