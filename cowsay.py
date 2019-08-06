@@ -19,23 +19,6 @@ def cowsay(cowType, str, length=40):
         return build_bubble(str, length) + build_cow()
 
 
-def build_oddcow():
-    return """
-         \   <__> 
-          \  (db)\_______
-             (__)\       )\/\\
-                 ||----W |
-                 ||     ||
-    """
-
-def build_cow():
-    return """
-         \   ^__^ 
-          \  (oo)\_______
-             (__)\       )\/\\
-                 ||----w |
-                 ||     ||
-    """
 
 def build_bubble(str, length=40):
     bubble = []
