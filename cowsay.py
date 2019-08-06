@@ -2,8 +2,14 @@
 # Copyright 2011 Jesse Chan-Norris <jcn@pith.org>
 # Licensed under the GNU LGPL version 3.0
 
+# Updating to support more cow types, maybe eyes, etc.
+# Russell R. Riker
+# Thanks to Jesse Chan-Norris for publishing the base code that I'm 
+# starting from.
+
 import sys
 import textwrap
+import cowtypes
 
 def cowsay(cowType, str, length=40):
     if cowType == "mad":
